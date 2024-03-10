@@ -1,0 +1,60 @@
+h1 {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item1, .item2, .item3 {
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1;
+    position: relative;
+    background-color: antiquewhite;
+}
+
+h3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: aquamarine;
+}
+
+.item1 p,
+.item2 p,
+.item3 p {
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main {
+        flex-wrap: wrap;
+    }
+    .item1, .item2 {
+        flex: 0 0 45%;
+        max-width: 50%;
+    }
+    .item3 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .main {
+        flex-wrap: wrap;
+    }
+    .item1, .item2, .item3 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
